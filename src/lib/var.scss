@@ -1,0 +1,47 @@
+// $color_background: #F3F5F7
+
+$colorMap: (
+	background: #F3F5F7,
+	backgroundDark: #454545,
+	whiteLight: #DADADA,
+	fontDark:#1d1d1f,
+	primary: #0066cc,
+	white:#fff,
+	dark_gray:#424245
+);
+
+@function color ($key) {
+	@return map-get($colorMap, $key);
+}
+
+$sizeMap: (
+	default: 16px,
+	small:12px,
+);
+
+@function size ($key: 'default') {
+	@return map-get($sizeMap, $key);
+}
+
+$screenMap:(
+	desktop:1440px,
+	laptop:1260px,
+	tablet:1000px,
+	mobile:620px
+);
+
+
+@function screen ($key: 'default') {
+	@return map-get($screenMap, $key);
+}
+
+// $contentSizeMap:(
+// 	desktop:1200px,
+// 	laptop:1000px,
+// 	tablet:800px,
+// 	mobile:600px
+// );
+
+// @function contentSize ($key: 'default') {
+// 	@return map-get($contentSizeMap, $key);
+// }
